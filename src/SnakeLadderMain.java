@@ -10,9 +10,11 @@ public class SnakeLadderMain {
 		int position = 0;
 		int number =0;
 		int option=0;
+		int rolling_die =0;
 		do{
 		    number =(int) Math.floor((Math.random()*10))%7;
 			option = (int) Math.floor((Math.random()*10))%3;
+			rolling_die++;
 			switch(option) {
 			case NO_PLAYS: 
 				break;
@@ -30,9 +32,10 @@ public class SnakeLadderMain {
 				}
 			break;
 			}
-
+			System.out.println("Position is "+ position);
 		}
 		while(position!=100);
+		System.out.println("no of times die rolled:"+ rolling_die);
 
 	}
 }
