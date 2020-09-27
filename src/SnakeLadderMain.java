@@ -13,7 +13,6 @@ public class SnakeLadderMain {
 		do{
 		    number =(int) Math.floor((Math.random()*10))%7;
 			option = (int) Math.floor((Math.random()*10))%3;
-
 			switch(option) {
 			case NO_PLAYS: 
 				break;
@@ -28,7 +27,9 @@ public class SnakeLadderMain {
 				}
 			break;
 			}
+
 		}
 		while(position!=100);
+
 	}
 }
