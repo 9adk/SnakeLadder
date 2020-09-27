@@ -18,6 +18,9 @@ public class SnakeLadderMain {
 				break;
 			case LADDER: 
 			position=position + number;
+			if(position>100) {
+				position = position-number;
+			}
 			
 			break;
 			case SNAKE: 
