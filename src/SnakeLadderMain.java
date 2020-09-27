@@ -10,21 +10,25 @@ public class SnakeLadderMain {
 		int position = 0;
 		int number =0;
 		int option=0;
-		number = (int) ( Math.floor(Math.random()*10)%6)+1;
-		
-		option = (int) Math.floor((Math.random()*10))%3;
+		do{
+		    number =(int) Math.floor((Math.random()*10))%7;
+			option = (int) Math.floor((Math.random()*10))%3;
 
-		switch(option) {
-		case NO_PLAYS: 
+			switch(option) {
+			case NO_PLAYS: 
+				break;
+			case LADDER: 
+			position=position + number;
+			
 			break;
-		case LADDER: 
-		position=position + number;
-		
-		break;
-		case SNAKE: 
-		position=position-number;
-		
-		break;
+			case SNAKE: 
+			position=position-number;
+			if(position<0) {
+				position = 0;
+				}
+			break;
+			}
 		}
+		while(position!=100);
 	}
 }
